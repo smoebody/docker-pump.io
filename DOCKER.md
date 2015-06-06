@@ -73,7 +73,7 @@ ssl-proxy. feel free to use and adapt according to your needs.
 
 ## Help / Bugs
 
-The [github-repo]() should be used to file bugs and ask for help, request features,
+The [github-repo](https://github.com/smoebody/docker-pump.io) should be used to file bugs and ask for help, request features,
 state pull-requests ...
 
 i welcome all contributions
