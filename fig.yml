@@ -1,0 +1,21 @@
+pumpio:
+  image: smoebody/pump.io
+  links:
+    - redis
+  environment:
+    - PUMPIO_hostname=io.metaccount.de
+    - PUMPIO_urlPort=443
+    - PUMPIO_site=io.metaccount.de
+    - PUMPIO_owner=smoe@metaccount.de
+    - PUMPIO_ownerURL=https://io.metaccount.de/smoe
+    - PUMPIO_secret=NKJBX0JPexY3t7yimhkTCcgDlfKSKSIC
+    - PUMPIO_smtpserver=smtp.metaccount.de
+    - PUMPIO_smtpusetls=true
+    - PUMPIO_smtpport=25
+    - PUMPIO_smtpuser=social@metaccount.de
+    - PUMPIO_smtppass=F_0ui5p7
+    - PUMPIO_key=
+    - PUMPIO_cert=
+
+redis:
+  image: sameersbn/redis:latest

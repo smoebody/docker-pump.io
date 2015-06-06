@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#
+#
+
+for i in `env | grep -e ^PUMPIO_ | awk -F"=" '{ print $1 }'`;do
+	key=${i##PUMPIO_};
+	eval "value=\$$i";
+	
+	if [ "$value" == "" ];then 
+		sed -e 's!^\(\s*"\)\('"$key"'"\s*:\)!\1#\2!' -i /etc/pump.io.json
+	else
+		sed -e 's!^\(\s*"'"$key"'"\s*:\s*"\?\)[^,"]*!\1'"$value"'!' -i /etc/pump.io.json
+	fi;
+done;
+
+exec /usr/bin/pump
+
